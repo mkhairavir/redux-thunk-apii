@@ -29,7 +29,7 @@ export function getDataGame() {
 export function postDataGame(postObjectGame) {
     return function(dispatch){
         axios.post('https://5ea0385811b078001679d857.mockapi.io/game', postObjectGame)
-        .then(() => dispatch(getDataSuccess()))
-        .then(error => dispatch(getDataFailed(error.message)))
+        .then(() => dispatch(getDataGame()))
+        .catch(error => dispatch(getDataFailed(error.message)))
     }
 }

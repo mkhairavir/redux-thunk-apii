@@ -47,7 +47,8 @@ const Mockapi = (props) => {
         </form>
 
         {props.gameName.data.map((item, index) => (
-            <li key={index}>{item.name}</li>
+            <li key={index}>
+                {item.id}{item.name}</li>
         ))}
 
         </div>
