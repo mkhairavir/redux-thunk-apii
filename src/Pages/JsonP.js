@@ -24,7 +24,7 @@ const JsonP = (props) => {
 const mapStateToProps = (props) => {
     console.log("props mapState", props)
     return {
-        api: props.data
+        api: props.apiReducer.data
     }
 }
 
