@@ -12,9 +12,11 @@ const JsonP = (props) => {
         <div>
         <h1>JSON Placeholder</h1>
         
-        {props.api.map((item,index) => (
+        {props.api.map((item,index) => {
+                if(index < 20){
+                    return(
             <li key={index}>{item.title}</li>
-        ))}
+        )}})}
         </div>
 
         

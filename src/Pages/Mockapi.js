@@ -26,6 +26,7 @@ const Mockapi = (props) => {
         }
         props.postDataGame(newGame)
         setidGame(idGame +1);
+        setGameNameState('')
 
     }
 
@@ -47,8 +48,7 @@ const Mockapi = (props) => {
         </form>
 
         {props.gameName.data.map((item, index) => (
-            <li key={index}>
-                {item.id}{item.name}</li>
+            <li key={index}>{item.name}</li>
         ))}
 
         </div>
