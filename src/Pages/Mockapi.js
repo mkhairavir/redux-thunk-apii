@@ -4,13 +4,11 @@ import {getDataGame, postDataGame} from '../Redux/Action/mockAction'
 
 const Mockapi = (props) => {
     const [gameNameState, setGameNameState] = useState("")  
-    const [idGame, setidGame] = useState(3)
+    // const [idGame, setidGame] = useState(3)
 
     useEffect(() => {
         props.getDataGame();
     }, [])
-
-    
 
     console.log("useeffect", props.gameName)
     const handleChange = (event) => {
@@ -19,13 +17,13 @@ const Mockapi = (props) => {
 
     const handlePost= (event) => {
         event.preventDefault()
-
+        console.log("handlePost", props.gameName)
         let newGame = {
-            id: idGame,
+          id: props.gameName.data[props.gameName.data.length - 1].id +1,
             name: gameNameState
         }
         props.postDataGame(newGame)
-        setidGame(idGame +1);
+        // setidGame(idGame +1);
         setGameNameState('')
 
     }
@@ -56,6 +54,7 @@ const Mockapi = (props) => {
 }
 
 const mapStateToProps = (props) => {
+    console.log("mapfoodapi",props)
     console.log("mapsstate",props.mockReducer.data)
     return {
         gameName: props.mockReducer

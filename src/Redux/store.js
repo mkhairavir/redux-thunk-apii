@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import apiReducer from './Reducer/apiReducer'
+import logger from 'redux-logger'
 import reduceGabung from './Reducer'
 
 
-export default createStore(reduceGabung, applyMiddleware(thunk))
+export default createStore(reduceGabung, applyMiddleware(thunk, logger))
