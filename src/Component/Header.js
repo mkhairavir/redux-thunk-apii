@@ -3,10 +3,10 @@ import {withRouter} from 'react-router-dom'
 
 const Header = (props) => {
     return (
-        <div>
-            <span onClick={() => {props.history.push('/')}}>MockAPI</span> ||||
-            <span onClick={() => {props.history.push('/jsonp')}}>JSON Placeholder</span>
-            <span onClick={() => {props.history.push('/foodapi')}}>FoodAPI</span>
+        <div style={{marginRight:"5px"}}>
+            <li onClick={() => {props.history.push('/')}}>MockAPI</li>
+            <li onClick={() => {props.history.push('/jsonp')}}>JSON Placeholder</li>
+            <li onClick={() => {props.history.push('/foodapi')}}>FoodAPI</li>
         </div>
     )
 }

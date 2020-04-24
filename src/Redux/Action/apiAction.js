@@ -34,3 +34,9 @@ export const getListApi = () => {
 
     }
 }
+
+export const getListApiByOne = (id) => {
+    return function(dispatch){
+        axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    }
+}
